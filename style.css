@@ -93,10 +93,9 @@ h2 {
     width: 90%;
     max-width: 1000px;
     text-align: center;
-    color: black;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    background: transparent; /* S'assure qu'il n'y a pas de fond */
+    box-shadow: none; /* <-- C'est ceci qui supprime le cadre fantôme */
 }
-
 .carousel-item-content { 
     width: 100%; 
     display: flex; 
@@ -113,8 +112,8 @@ h2 {
     max-height: 65vh;
     object-fit: contain;
     border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Ajoute l'ombre directement sur la photo */
 }
-
 .carousel-item h2 { color: black; font-size: 3rem; margin: 0; }
 
 /* --- Bouton PLUS Moderne --- */
