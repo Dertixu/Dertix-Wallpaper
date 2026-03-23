@@ -296,3 +296,27 @@ h2 {
     100% { transform: translateY(0) translateX(0) rotate(0deg); }
 }
 
+/* --- Modal Preview (Menu Glassmorphism) --- */
+.glass-modal {
+    background: rgba(30, 35, 45, 0.4) !important; /* Fond très transparent */
+    backdrop-filter: blur(20px); /* Flou intense */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.font-fredoka {
+    font-family: 'Fredoka', sans-serif;
+    color: #2ab7ca;
+    font-size: 1.5rem;
+}
+
+#previewIframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Force le ratio exact de 3840x2160 (16:9) */
+    /* On supprime le height: 65vh; car le ratio calcule la hauteur tout seul ! */
+    border: none;
+    border-radius: 12px;
+    background-color: #1a1e26; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}

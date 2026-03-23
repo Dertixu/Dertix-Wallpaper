@@ -1,0 +1,17 @@
+{
+  "AppVersion": "2.0.0",
+  "Title": "AyameWallpaper",
+  "Thumbnail": "preview.png",
+  "Preview": "preview.gif",
+  "Desc": "Fond d'écran avec date et lecteur musical de Ayame",
+  "Author": "Dertixu",
+  "License": null,
+  "Contact": null,
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--system-nowplaying",
+  "IsAbsolutePath": false,
+  "Id": null,
+  "Tags": null,
+  "Version": 0
+}

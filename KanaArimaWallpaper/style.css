@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    
+    background-image: url('images/fond.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+}
+
+
+/* La boîte qui regroupe la date et la musique à gauche */
+#left-container {
+    position: absolute;
+    top: 50%; 
+    left: 5%; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+/* --- LA DATE --- */
+#date-display {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    
+    /* Le nouveau dégradé Rouge vers Rose clair */
+    background: linear-gradient(90deg, #e62252 0%, #ff85b3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- LE LECTEUR SPOTIFY --- */
+#spotify-widget {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#track-art {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; 
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(230, 34, 82, 0.3); 
+}
+
+#track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#track-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+    
+    /* Le même dégradé Rouge vers Rose clair */
+    background: linear-gradient(90deg, #e62252 0%, #ff85b3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#track-artist {
+    font-size: 1.1rem;
+    color: #ffb3c6; 
+    font-weight: 500;
+}

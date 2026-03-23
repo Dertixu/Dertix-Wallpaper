@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;  
+    height: 100vh; 
+    overflow: hidden;
+    background-color: #000;
+    
+    /* Configuration de l'image de fond */
+    background-image: url('images/images1.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+}
+
+/* --- LA DATE --- */
+#date-display {
+    position: absolute;
+    top: 5%; 
+    left: 46%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    
+    background: linear-gradient(90deg, #fdfa9e 0%, #f397c2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- LE LECTEUR SPOTIFY --- */
+#spotify-widget {
+    position: absolute;
+    bottom: 15%; 
+    left: 8%;  
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#track-art {
+    width: 90px; 
+    height: 90px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#track-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+    
+    
+    background: linear-gradient(90deg, #fdfa9e 0%, #f397c2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#track-artist {
+    font-size: 1.1rem;
+    color: #ffffff; 
+    font-weight: 500;
+}

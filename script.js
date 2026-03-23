@@ -101,3 +101,24 @@ document.addEventListener('mousemove', (e) => {
         }
     });
 });
+
+// --- Fonction pour ouvrir la preview HTML ---
+function openPreview(previewPath, downloadUrl) {
+    // 1. On cible les éléments du menu
+    const iframe = document.getElementById('previewIframe');
+    const downloadBtn = document.getElementById('modalDownloadBtn');
+    
+    // 2. On injecte les bons liens selon la carte cliquée
+    iframe.src = previewPath;
+    downloadBtn.href = downloadUrl;
+    
+    // 3. On ordonne à Bootstrap d'afficher le menu
+    const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
+    previewModal.show();
+}
+
+// --- Fonction pour vider l'iframe à la fermeture (Coupe la musique/vidéo) ---
+document.getElementById('previewModal').addEventListener('hidden.bs.modal', function () {
+    const iframe = document.getElementById('previewIframe');
+    iframe.src = ""; // On vide l'iframe
+});

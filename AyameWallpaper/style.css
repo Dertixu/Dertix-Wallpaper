@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+}
+
+/* --- LE SECRET : LE CADRE VERROUILLÉ 16:9 --- */
+#art-container {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Ces 4 lignes forcent le cadre à garder les proportions de l'image (16:9) */
+    width: 100vw;
+    height: 56.25vw; 
+    min-height: 100vh;
+    min-width: 177.77vh; 
+    
+    /* On met l'image ici, plus dans le body */
+    background-image: url('images/fond.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- L'AURÉOLE (LA DATE SVG) --- */
+#halo-date {
+    position: absolute;
+    
+    /* MAINTENANT C'EST FACILE : Ces valeurs sont verrouillées sur le dessin ! */
+    /* Ajuste-les pour la poser parfaitement sur sa tête. */
+    top: 4%;    
+    right: 14%; 
+    
+    width: 32%; /* Ajuste ceci si tu veux l'arc plus large ou plus petit */
+    height: auto;
+    pointer-events: none; 
+}
+
+#halo-date text {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 6px;
+}
+
+/* --- LE LECTEUR SPOTIFY À GAUCHE --- */
+#left-container {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: flex-start;
+    z-index: 10; /* Assure que le lecteur reste au premier plan */
+}
+
+#spotify-widget {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#track-art {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+}
+
+#track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#track-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+    background: linear-gradient(90deg, #e9d45e 0%, #D4AF37 50%, #FF8C00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#track-artist {
+    font-size: 1.1rem;
+    color: #ffe4b5; 
+    font-weight: 500;
+}

@@ -40,13 +40,38 @@
         <a href="#wallpapers" class="btn-plus">PLUS</a>
     </section>
 
-    <section id="wallpapers" class="container section-spacing">
+<section id="wallpapers" class="container section-spacing">
         <h2>Mes Wallpaper</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col"><a href="https://kdrive.infomaniak.com/app/share/1260175/9a2b34a8-786c-406b-bcff-00608cab4ac5" target="_blank" class="wallpaper-card"><img src="images/DragonWallpaper.png" alt="Wallpaper 1" class="img-fluid rounded"><div class="btn-download">download</div></a></div>
-            <div class="col"><a href="https://kdrive.infomaniak.com/app/share/1260175/7ae81020-b0d9-450a-af6b-df01ef56c821" target="_blank" class="wallpaper-card"><img src="images/CallOfTheNight.png" alt="Wallpaper 2" class="img-fluid rounded"><div class="btn-download">download</div></a></div>
-            <div class="col"><a href="https://kdrive.infomaniak.com/app/share/1260175/62bc9de6-3a4c-4c1c-969b-bd1ee8883023" target="_blank" class="wallpaper-card"><img src="images/KanaArimaWallpaper.png"  alt="Wallpaper 3" class="img-fluid rounded"><div class="btn-download">download</div></a></div>
-            <div class="col"><a href="https://kdrive.infomaniak.com/app/share/1260175/fc698fc0-6ad2-499b-b5c2-689f4a25948c" target="_blank" class="wallpaper-card"><img src="images/AyameWallpaper.png"  alt="Wallpaper 4" class="img-fluid rounded"><div class="btn-download">download</div></a></div>
+            
+            <div class="col">
+                <div class="wallpaper-card" style="cursor: pointer;" onclick="openPreview('DragonWallpaper/index.html', 'https://kdrive.infomaniak.com/app/share/1260175/9a2b34a8-786c-406b-bcff-00608cab4ac5')">
+                    <img src="images/DragonWallpaper.png" alt="Wallpaper 1" class="img-fluid rounded">
+                    <div class="btn-download">Live Preview</div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="wallpaper-card" style="cursor: pointer;" onclick="openPreview('CallOfTheNightWallpaper/index.html', 'https://kdrive.infomaniak.com/app/share/1260175/7ae81020-b0d9-450a-af6b-df01ef56c821')">
+                    <img src="images/CallOfTheNight.png" alt="Wallpaper 2" class="img-fluid rounded">
+                    <div class="btn-download">Live Preview</div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="wallpaper-card" style="cursor: pointer;" onclick="openPreview('KanaArimaWallpaper/index.html', 'https://kdrive.infomaniak.com/app/share/1260175/62bc9de6-3a4c-4c1c-969b-bd1ee8883023')">
+                    <img src="images/KanaArimaWallpaper.png" alt="Wallpaper 3" class="img-fluid rounded">
+                    <div class="btn-download">Live Preview</div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="wallpaper-card" style="cursor: pointer;" onclick="openPreview('AyameWallpaper/index.html', 'https://kdrive.infomaniak.com/app/share/1260175/fc698fc0-6ad2-499b-b5c2-689f4a25948c')">
+                    <img src="images/AyameWallpaper.png" alt="Wallpaper 4" class="img-fluid rounded">
+                    <div class="btn-download">Live Preview</div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -104,7 +129,22 @@
             <div id="copyAlert" class="text-success mt-2" style="display: none;">Copié !</div>
         </div>
     </section>
-
+    
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered"> <div class="modal-content glass-modal">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title font-fredoka text-white">Live Preview</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <iframe id="previewIframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer border-0 justify-content-center pt-0">
+                    <a href="#" id="modalDownloadBtn" target="_blank" class="btn-plus" style="transform: translateY(0); margin-bottom: 10px;">Télécharger ce Wallpaper</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

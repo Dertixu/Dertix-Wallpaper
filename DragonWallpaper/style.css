@@ -1,0 +1,83 @@
+/* Importation de ta police */
+@font-face {
+    font-family: 'Plaster';
+    src: url('Plaster-Regular.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  font-family: 'Plaster', sans-serif; 
+  color: white; 
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* La vidéo floutée au centre */
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(8px);
+  transform: scale(1.05);
+}
+
+/* Le conteneur centré pour la date et la musique */
+.widget-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#date-display {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+#spotify-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+#track-art {
+    width: 280px; 
+    height: 280px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+#track-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#track-title {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+#track-artist {
+    font-size: 1.5rem;
+    color: #cccccc;
+}
+

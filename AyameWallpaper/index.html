@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fond Halo Doré</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="art-container">
+        <svg id="halo-date" viewBox="0 0 500 500">
+            <defs>
+                <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#FFDF00" />
+                    <stop offset="50%" stop-color="#D4AF37" />
+                    <stop offset="100%" stop-color="#FF8C00" />
+                </linearGradient>
+            </defs>
+            <path id="curve" d="M 50 250 A 200 200 0 0 1 450 250" fill="transparent" />
+            <text width="500">
+                <textPath href="#curve" startOffset="50%" text-anchor="middle" fill="url(#gold-gradient)">
+                    CHARGEMENT...
+                </textPath>
+            </text>
+        </svg>
+    </div>
+
+    <div id="left-container">
+        <div id="spotify-widget">
+            <img id="track-art" src="" alt="Pochette" style="display:none;">
+            <div id="track-info">
+                <div id="track-title">En attente de musique</div>
+                <div id="track-artist">Lance Spotify sur ton PC</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
