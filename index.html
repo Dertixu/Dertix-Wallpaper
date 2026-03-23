@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Wallpapers</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-links">
+            <a href="#wallpapers" class="menu-btn" onclick="toggleMenu()">Mes Wallpaper</a>
+            <a href="#installation" class="menu-btn" onclick="toggleMenu()">Comment installer mon wallpaper</a>
+            <a href="#help" class="menu-btn" onclick="toggleMenu()">Need help</a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div id="mainCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000"><div class="carousel-item-content"><img src="images/DragonWallpaper.png" alt="Wallpaper 1" class="img-fluid rounded"></div></div>
+                <div class="carousel-item" data-bs-interval="4000"><div class="carousel-item-content"><img src="images/CallOfTheNight.png" alt="Wallpaper 2" class="img-fluid rounded"></div></div>
+                <div class="carousel-item" data-bs-interval="4000"><div class="carousel-item-content"><img src="images/KanaArimaWallpaper.png"  alt="Wallpaper 3" class="img-fluid rounded"></div></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"><i class="fa-solid fa-chevron-left text-primary fs-1"></i></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next"><i class="fa-solid fa-chevron-right text-primary fs-1"></i></button>
+        </div>
+        <a href="#wallpapers" class="btn-plus">PLUS</a>
+    </section>
+
+    <section id="wallpapers" class="container section-spacing">
+        <h2>Mes Wallpaper</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col"><a href="https://kdrive.infomaniak.com/app/share/1260175/9a2b34a8-786c-406b-bcff-00608cab4ac5" target="_blank" class="wallpaper-card"><img src="images/DragonWallpaper.png" alt="Wallpaper 1" class="img-fluid rounded"><div class="btn-download">download</div></a></div>
+            <div class="col"><a href="https://kdrive.infomaniak.com/app/share/1260175/7ae81020-b0d9-450a-af6b-df01ef56c821" target="_blank" class="wallpaper-card"><img src="images/CallOfTheNight.png" alt="Wallpaper 2" class="img-fluid rounded"><div class="btn-download">download</div></a></div>
+            <div class="col"><a href="https://kdrive.infomaniak.com/app/share/1260175/62bc9de6-3a4c-4c1c-969b-bd1ee8883023" target="_blank" class="wallpaper-card"><img src="images/KanaArimaWallpaper.png"  alt="Wallpaper 3" class="img-fluid rounded"><div class="btn-download">download</div></a></div>
+        </div>
+    </section>
+
+    <section id="installation" class="container section-spacing text-center">
+        <h2>Comment installer mon wallpaper</h2>
+        <div class="mt-5">
+            <div class="step-row">
+                <div class="step-text">STEP 1</div>
+                <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="step-content">
+                    <a href="https://apps.microsoft.com/detail/9ntm2qc6qws7?hl=fr-FR&gl=US" target="_blank">
+                        <img src="https://store-images.s-microsoft.com/image/apps.4382.14081395781192770.8256e6d7-810d-452f-8a03-911cb7ee9df3.3dc31245-5384-4861-ba0d-ed2ebbaad660" alt="Lively Wallpaper" style="height: 80px; border-radius: 5px;">
+                    </a>
+                </div>
+            </div>
+            <div class="step-row"><div class="step-text">STEP 2</div><div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div><div class="step-content"><p class="step-desc">Télécharge le wallpaper<br>de ton choix</p></div></div>
+            <div class="step-row"><div class="step-text">STEP 3</div><div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div><div class="step-content"><p class="step-desc">Glisse le ficher zip télécharger<br>dans l'app lively wallpaper</p></div></div>
+        </div>
+    </section>
+
+    <section id="help" class="container section-spacing text-center">
+        <h2>Need Help</h2>
+        <div class="mt-4">
+            <div class="discord-title mb-3"><i class="fa-brands fa-discord"></i> Mon discord</div>
+            <button class="btn-discord" onclick="copyToClipboard()">dertixu</button>
+            <div id="copyAlert" class="text-success mt-2" style="display: none;">Copié !</div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
